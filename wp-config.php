@@ -41,6 +41,8 @@ if (!function_exists('getenv_docker')) {
 
 // chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
 
+define('WP_MEMORY_LIMIT', '512M');
+define('WP_MAX_MEMORY_LIMIT', '512M');
 define('FS_METHOD', 'direct');
 
 /*
