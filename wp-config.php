@@ -39,6 +39,15 @@ if (!function_exists('getenv_docker')) {
 	}
 }
 
+// chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
+
+define('FS_METHOD', 'direct');
+
+/*
+define('WP_SITEURL', 'http://localhost:8001');
+define('WP_HOME', 'http://localhost:8001');
+*/
+
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', getenv_docker('WORDPRESS_DB_NAME', 'wordpress') );
